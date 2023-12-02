@@ -1,4 +1,3 @@
-import React from 'react';
 import './Nav.css';
 import { FaUserCircle } from "react-icons/fa";
 import { HiOutlineShoppingBag } from "react-icons/hi2";

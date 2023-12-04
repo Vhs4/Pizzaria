@@ -1,3 +1,5 @@
+import './Cardapio.css'
+
 const Cardapio = () => {
   const gridItems = [
     { id: 1, description: 'Pizza sabor da casa', imageSrc: 'https://media.discordapp.net/attachments/1026845441071005776/1180608743453511810/img1Grid.png?ex=657e0a93&is=656b9593&hm=dd6ae366e84e321012e9c00920e181cbd8d3699690f20c71fcf54925199dfab1&=&format=webp&quality=lossless' },
@@ -9,7 +11,7 @@ const Cardapio = () => {
 
   // Componente para cada item do grid
   const GridItem = ({ description, imageSrc }) => (
-    <div style={{borderRadius: '10%'}} className="bg-white rounded-lg border-b pb-4 ">
+    <div style={{borderRadius: '10%'}} className="bg-white rounded-lg border-b pb-4 cardapiodiv">
       <img src={imageSrc} alt={`Imagem para ${description}`} className="w-full h-44 rounded-md object-cover mb-2" />
       <p className="text-base ml-2" style={{color: '#B30733'}}>{description}</p>
     </div>
@@ -17,7 +19,6 @@ const Cardapio = () => {
 
   return (
     <>
-    <h3 className="font-bold text-xl" style={{color: '#B30733', marginLeft: '262px', marginBottom: '2rem', marginTop: '0'}}>NOSSO CARDÁPIO</h3>
     <section className="flex items-center justify-center min-w-min">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-4">
         {gridItems.map((item) => (

@@ -6,7 +6,7 @@ const Nav = () => {
     return (
         <>
             <nav className='flex max-h-12'>
-                <h1 className='flex-1 ml-4'>CODAR PIZZARIA</h1>
+                <h1 className='flex-1 ml-4 mt-2'>CODAR PIZZARIA</h1>
                 <ul className='flex items-center cursor-pointer'>
                     <li className='items-nav hover:border-b-2 border-b-transparent hover:border-orange-500 mr-4 buscar'>Buscar</li>
                     <li className='items-nav hover:border-b-2 border-b-transparent hover:border-orange-500 mr-4'>Sobre</li>

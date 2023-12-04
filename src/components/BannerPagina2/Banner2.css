@@ -1,0 +1,85 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+  }
+  
+  .bannertwo {
+    background: url(../../assets/banner2.png) no-repeat;
+    min-width: 820px;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);  
+  }
+  
+  .contenttwo {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .buttontwo {
+    margin-top: 90px;
+    padding: 5px 1rem;
+    font-size: 1rem;
+    font-weight: 400;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+  }
+  
+  .buttontwo + .buttontwo {
+    margin-left: 10px;
+  }
+
+  .margin-p {
+    margin-bottom: 4.7rem;
+  }
+
+  .divmeiotwo {
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    max-width: 820px;
+    position: relative;
+    margin-top: 3rem;
+  }
+
+  .divultwo {
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    max-width: 820px;
+    position: relative;
+    margin-top: 1.5rem;
+  }
+
+  .divfinaltwo {
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    max-width: 820px;
+    position: relative;
+    margin-top: 1.5rem;
+  }
+
+  .small-border {
+    border-top: 2px solid #2E4765;  /* Alterada de border-left para border-top */
+    opacity: 0.2;
+    width: 100%;  /* Ajustada de height para width */
+    margin-top: .7rem;  /* Ajustada de margin-left para margin-top */
+    margin-left: .5rem;
+  }
+  
+  li+li {
+    margin-left: 10px;
+  }
+  
+  @media (min-width: 768px) {
+    .banner {
+      width: 65%;
+    }
+  }

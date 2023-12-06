@@ -18,10 +18,12 @@ const App = () => {
 const AppRoutes = () => {
   return (
     <>
-        <Link to="pagina4">
+      <Link to="pagina2">
+        <button>Ir para a Página 2</button> <br />
+      </Link>
+      <Link to="pagina4">
         <button>Ir para a Página 4</button>
       </Link>
-      <h1>aaaaa</h1>
     </>
   );
 };

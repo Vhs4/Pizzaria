@@ -6,38 +6,40 @@ const Banner2 = () => {
   return (
     <>
       <section className="flex items-center mt-4 justify-center">
-        <div className="bannertwo">
+        <div className="bannertwo min-w-min">
           <div className="contenttwo">
             <div className="buttonstwo ml-2 mt-6 md:mt-8 lg:mt-10 xl:mt-12 flex justify-start">
               <h1 className="text-2xl text-white font-normal">
                 Pegue uma fatia
               </h1>
             </div>
-            <div className="buttonstwo margin-p mt-6 md:mt-8 lg:mt-10 xl:mt-12 flex justify-start">
+            <div className="buttonstwo margin-p mt-6 md:mt-8 lg:mt-10 xl:mt-12 flex justify-start flex-wrap">
               <button className="buttontwo md:ml-2 flex items-center">
-                <FaApple style={{ fontSize: '2rem' }} /><span style={{fontSize: '.8rem'}}>Download on</span><span className="font-bold"></span>App Store</button>
+                <div className="flex"><FaApple style={{ fontSize: '2rem' }} /></div>
+                <div className="flex flex-col"><span style={{ fontSize: '.8rem' }}>Download on</span><span className="font-bold">App Store</span></div></button>
               <button className="buttontwo md:ml-2 flex items-center">
-                <RiGooglePlayLine style={{ fontSize: '2rem' }} /><span style={{fontSize: '.8rem'}}>Get it on</span><span className="font-bold">Google Play</span>
+                <div className="flex"><RiGooglePlayLine style={{ fontSize: '2rem' }} /></div>
+                <div className='flex flex-col'><span style={{ fontSize: '.8rem' }}>Get it on</span><span className="font-bold">Google Play</span></div>
               </button>
             </div>
           </div>
         </div>
       </section>
-    <div className="divmeiotwo justify-start flex flex-col items-center md:flex-row md:items-start">
-      <h1 className="font-bold text-xl" style={{color: '#B30733', marginBottom: '1rem', marginTop: '0'}}>NOSSO CARDÁPIO</h1>
-    </div>
-    <div  className="divultwo justify-start flex flex-col items-center md:flex-row md:items-start">
-      <ul className='flex'>
-        <li className="text-sm" style={{backgroundColor: '#EF4C00', borderRadius: '1rem', padding: '.5rem', color: 'white'}}>Todas (170)</li>
-        <li style={{backgroundColor: 'white', borderRadius: '1rem', padding: '.4rem', color: 'gray'}}>
-Brasileiras (41)</li>
-        <li style={{backgroundColor: 'white', borderRadius: '1rem', padding: '.4rem', color: 'gray'}}>
-Italiana (25)</li>
-      </ul>
+      <div className="divmeiotwo justify-start flex flex-col items-center md:flex-row md:items-start">
+        <h1 className="font-bold text-xl" style={{ color: '#B30733', marginBottom: '1rem', marginTop: '0' }}>NOSSO CARDÁPIO</h1>
+      </div>
+      <div className="divultwo justify-start flex flex-col items-center md:flex-row md:items-start">
+        <ul className='flex'>
+          <li className="text-sm" style={{ backgroundColor: '#EF4C00', borderRadius: '1rem', padding: '.5rem', color: 'white' }}>Todas (170)</li>
+          <li style={{ backgroundColor: 'white', borderRadius: '1rem', padding: '.4rem', color: 'gray' }}>
+            Brasileiras (41)</li>
+          <li style={{ backgroundColor: 'white', borderRadius: '1rem', padding: '.4rem', color: 'gray' }}>
+            Italiana (25)</li>
+        </ul>
       </div>
       <div className="divfinaltwo justify-start flex flex-col items-center md:flex-row md:items-start">
-      <h1 className="font-bold text-xl" style={{color: '#B30733', marginBottom: '1rem', marginTop: '0'}}>POPULARES</h1><div className='small-border mr-4'></div>
-    </div>
+        <h1 className="font-bold text-xl" style={{ color: '#B30733', marginBottom: '1rem', marginTop: '0' }}>POPULARES</h1><div className='small-border mr-4'></div>
+      </div>
     </>
   );
 }

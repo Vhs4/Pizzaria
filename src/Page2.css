@@ -3,3 +3,9 @@
     display: flex;
     flex-direction: column;
 }
+
+@media (max-width: 640px) {
+    .div1320 {
+      margin: 0 auto;
+    }
+  }

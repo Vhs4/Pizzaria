@@ -7,9 +7,11 @@ function Page4() {
   return (
     <>
       <Nav />
+    <div className="div1320">
       <Banner />
       <div style={{marginTop: '2rem'}}/>
       <Cardapio />
+      </div>
     </>
   )
 }

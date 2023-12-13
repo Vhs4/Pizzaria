@@ -13,6 +13,7 @@ export default {
       'small': {'max': '639px'},    
     },
     extend: {
+      
       colors: {
         'customRed':'#B30733',
         'customPink':'#FF0043',

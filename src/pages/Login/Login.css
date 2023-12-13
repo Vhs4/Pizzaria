@@ -1,11 +1,3 @@
-
-.container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;  
-}
-
 .background-image{
-    background: url(../src/assets/bgpizzalogin.png) no-repeat center tope;
+    background: url(../src/assets/bgpizzalogin.png) no-repeat center top;
 }

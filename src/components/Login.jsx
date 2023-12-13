@@ -1,108 +1,124 @@
-import React from 'react';
+import { IoLogoApple } from "react-icons/io5";
+import { IoLogoGooglePlaystore } from "react-icons/io5";
+import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import './Login.css';
 
 const Login = () => {
-  const [email, setEmail] = React.useState('');
-  const [senha, setSenha] = React.useState('');
-  const [loginEmail, setLoginEmail] = React.useState('');
-  const [loginSenha, setLoginSenha] = React.useState('');
-  const [isLoggedIn, setLoggedIn] = React.useState(false);
+    const navigate = useNavigate()
 
-  const registerUser = () => {
-    const existingUsers = JSON.parse(localStorage.getItem('users')) || [];
-    const userExists = existingUsers.some(user => user.email === email);
+    const [loginData, setLoginData] = useState({ email: '', password: ''});
+    const [loginStatus, setLoginStatus] = useState(null);
 
-    if (userExists) {
-      alert('Este e-mail já está em uso. Escolha outro.');
-    } else {
-      const newUser = { email, senha };
-      existingUsers.push(newUser);
-      localStorage.setItem('users', JSON.stringify(existingUsers));
+    const handleChange = (e) => {
+        const {name, value} = e.target;
+        setLoginData((prevData) => ({
+            ...prevData,
+            [name]: value,
+        }));
+    };
 
-      alert('Registro bem-sucedido! Faça login agora.');
-    }
-  };
+    const handleLogin = () => {
 
-  const loginUser = () => {
-    const existingUsers = JSON.parse(localStorage.getItem('users')) || [];
-    const user = existingUsers.find(user => user.email === loginEmail);
+        const storedUserData = JSON.parse(localStorage.getItem("userData"));
+        if (
+            storedUserData &&
+            storedUserData.email === loginData.email &&
+            storedUserData.password === loginData.password
+        ) {
 
-    if (user && user.senha === loginSenha) {
-      alert('Login bem-sucedido!');
-      setLoggedIn(true);
-    } else {
-      alert('E-mail ou senha incorretos. Tente novamente.');
-    }
-  };
+            navigate('/page2');
+        } else {
+            setLoginStatus("error");
+            console.error("Login falhou. Verifique suas credenciais.");
+        }
+    };
 
-  const logoutUser = () => {
-    setLoggedIn(false);
-  };
+    return (
+        <div className="flex justify-center items-center h-screen medium:h-auto x-sm:h-auto">
+            <main className="h-screen border-2 p-1 rounded-md flex m-4 medium:flex-col  medium:items-center  medium:m-0 w-[80%] medium:h-auto x-sm:h-auto">
 
-  return (
-    <div className="flex container mx-auto h-screen bg-gray-100 border-solid border border-gray-700 rounded-lg">
-      <div className="flex flex-col left-div bg-cover h-full w-1/2">
-        <h1 className="text-orange-500 text-4xl mt-1">Pizzaria</h1>
-        <h2 className="text-red-500">Pegue uma fatia</h2>
-        <ul className="flex justify-center mt-auto">
-          <li className="list-none m-1 p-2 bg-red-700 border-white border rounded-md">aaaa</li>
-          <li className="list-none m-1 p-2 bg-red-700 border-white border rounded-md">aaaa</li>
-        </ul>
-      </div>
-      <div className="flex flex-col right-div justify-center items-center p-20 w-1/2">
-        {isLoggedIn ? (
-          <div>
-            <h2>Bem-vindo!</h2>
-            {/* Adicione aqui o conteúdo após o login */}
-            <button onClick={logoutUser} className="mt-4 p-2 bg-red-700 text-white rounded-md cursor-pointer">Logout</button>
-          </div>
-        ) : (
-          <form className="flex flex-col items-center">
-            <label htmlFor="email" className="mt-10">E-mail:</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              className="mb-10 p-2"
-              required
-            />
+                {/* Left Section */}
+                <section className="w-1/2  py-2 flex flex-col justify-between gap-6 background-image medium:w-full medium:h-[250px] medium:rounded-md">
 
-            <label htmlFor="senha">Senha:</label>
-            <input
-              type="password"
-              id="senha"
-              name="senha"
-              value={senha}
-              onChange={(e) => setSenha(e.target.value)}
-              className="mb-10 p-2"
-              required
-            />
+                    <div className=''>
+                        <h1 className='text-3xl text-center text-customOrange font-medium'>Codar Pizzaria</h1>
+                        <h2 className='text-md text-center text-customLOrange'>PEGUE UMA FATIA</h2>
+                    </div>
 
-            <p>
-              <a href="#esqueceu-senha" className="text-orange-500">Esqueceu sua senha?</a>
-            </p>
+                    <div className='flex gap-6 justify-center my-4 large:flex-col large:items-center medium:flex-row x-sm:flex-col'>
+                    <button type="button" className='flex bg-customRed rounded-lg px-4 py-2 items-center gap-2 text-white'>
+                        <IoLogoApple size={30} />
+                        <div className='flex flex-col'>
+                        <span className='text-xs text-left'>Download on the</span>
+                        <span className='text-lg font-medium text-left leading-4'>Apple Store</span>
+                        </div>
+                    </button>
+                    <button type="button" className='flex bg-customPink rounded-lg px-4 py-2 items-center gap-2 text-white'>
+                        <IoLogoGooglePlaystore  size={30} />
+                        <div className='flex flex-col'>
+                        <span className='text-xs text-left'>Get it on</span>
+                        <span className='text-lg font-medium text-left leading-4'>Play Store</span>
+                        </div>
+                    </button>
+                </div>
+                </section>
 
-            <button
-              type="button"
-              onClick={registerUser}
-              className="mt-10 p-2 bg-red-700 text-white rounded-md cursor-pointer"
-            >
-              Criar Conta
-            </button>
-            <button
-              type="button"
-              onClick={loginUser}
-              className="p-2 bg-red-700 text-white rounded-md cursor-pointer"
-            >
-              Acessar
-            </button>
-          </form>
-        )}
-      </div>
-    </div>
-  );
-};
+                {/* Right Section */}
+                <section className="w-1/2 py-5 flex flex-col justify-between items-center rounded-2x medium:w-full medium:rounded-none x-sm:500px">
+                    <div className="border-b-2 border-slate-300">
+
+                    </div>
+
+                    <div className="text-center">
+                        <h3 className='text-2xl text-center text-customRed font-semibold'>Efetuar Login</h3>
+                        <span className='border-b-4 border-b-customOrange rounded-full inline-block w-14 text-center medium:my-[9px] medium:border-b-4'></span>
+                    </div>
+
+                    <form onSubmit={handleLogin} className='flex flex-col items-center justify-between w-3/4 gap-10 relative x-sm:w-5/6'>   
+
+                        <input 
+                            type="email" 
+                            placeholder='E-mail'
+                            name="email"
+                            className='input'
+                            value={loginData.email}
+                            onChange={handleChange} 
+                        />
+
+                        <input 
+                            type="password" 
+                            placeholder='Senha'
+                            name="password"  
+                            className='input'
+                            value={loginData.password}
+                            onChange={handleChange}
+                        />
+
+                        <Link to={'/register'} className="w-3/4 self-center text-xs text-right absolute top-[8.3rem]">
+                            Esqueceu sua senha?
+                        </Link>
+
+
+                        <button type="submit" className='bg-customOrange rounded-2xl py-2 text-white w-3/4 text-center' >
+                            Acessar
+                        </button>
+                        {loginStatus === "error" && (
+                            <p className="text-red-500 text-sm mt-2">
+                                Login falhou. Verifique suas credenciais.
+                            </p>
+                        )}
+
+                        <Link to={'/register'} className='rounded-2xl py-2 w-3/4 text-center border-2'>
+                            Criar uma conta
+                        </Link>
+                    </form>
+                    
+                    <p className='text-black text-sm self-end pr-2 medium:self-center mt-8 medium:mt-36rem'>Codar pizzaria 2020</p>
+                </section>
+            </main>
+        </div>
+    )
+}
 
 export default Login;

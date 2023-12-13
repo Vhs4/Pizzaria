@@ -1,4 +1,4 @@
-import './Cardapio.css'
+import './Menu.css'
 
 const Cardapio = () => {
   const gridItems = [

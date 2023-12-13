@@ -10,10 +10,10 @@ export default {
       'extraL': {'max': '1279px'},
       'large': {'max': '1023px'},
       'medium': {'max': '767px'},
-      'small': {'max': '639px'},    
+      'small': {'max': '639px'},
+      'x-sm': {'max': '520px'},    
     },
     extend: {
-      
       colors: {
         'customRed':'#B30733',
         'customPink':'#FF0043',

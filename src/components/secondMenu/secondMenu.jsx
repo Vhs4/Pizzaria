@@ -1,6 +1,6 @@
-import './Cardapio2.css'
+import './secondMenu.css'
 
-const Cardapio2 = () => {
+const secondMenu = () => {
   const gridItems = [
     { id: 1, description: 'Pizza Matex', imageSrc: 'https://media.discordapp.net/attachments/1026845441071005776/1181311656630951978/cardapio2img1.png?ex=65809936&is=656e2436&hm=c2ab6359b2215ec08c8bc2be61a1bf039091dd901a69b7ba5a08ff4e3e3432dc&=&format=webp&quality=lossless' },
     { id: 2, description: 'Pizza Erivax', imageSrc: 'https://media.discordapp.net/attachments/1026845441071005776/1181311657172013128/cardapio2img2.png?ex=65809936&is=656e2436&hm=87c9b6b210d0cb2647b9f5a8f9bdfaaa796a3a148f920f5438be0ac0b02df011&=&format=webp&quality=lossless' },
@@ -28,4 +28,4 @@ const Cardapio2 = () => {
   );
 };
 
-export default Cardapio2;
+export default secondMenu;

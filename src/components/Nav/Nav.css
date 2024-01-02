@@ -23,7 +23,7 @@ nav ul li {
     cursor: pointer;
 }
 
-.cart, .cartTop {
+.cart {
     background: #EF4C00;
     border-radius: 28px;
     color: #FFFFFF;
@@ -35,22 +35,4 @@ nav ul li {
     opacity: 0.2;
     height: 2rem;
     margin-left: 10px;
-}
-
-.mobile-cart {
-    display: none;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    margin-left: 1.5rem;
-    margin-bottom: 1rem;
-  }
-  
-  @media (max-width: 720px) {
-        .mobile-cart {
-            display: block;
-        }
-        .cartTop {
-          opacity: 0;
-        }
   }

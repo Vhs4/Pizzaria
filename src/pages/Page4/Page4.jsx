@@ -1,6 +1,6 @@
-import Cardapio from './components/Cardapio';
-import Nav from './components/Nav';
-import Banner from './components/BannerPagina4/Banner';
+import Cardapio from '../../components/Menu/Menu';
+import Nav from '../../components/Nav/Nav';
+import Banner from '../../components/BannerPagina4/Banner';
 
 function Page4() {
 

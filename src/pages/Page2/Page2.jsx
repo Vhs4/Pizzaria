@@ -1,6 +1,6 @@
-import Nav from './components/Nav';
-import Banner2 from './components/BannerPagina2/Banner2';
-import Cardapio2 from './components/Cardapio2';
+import Nav from '../../components/Nav/Nav';
+import Banner2 from '../../components/BannerPagina2/Banner2';
+import Cardapio2 from '../../components/secondMenu/secondMenu';
 import './Page2.css'
 
 const Page2 = () => {

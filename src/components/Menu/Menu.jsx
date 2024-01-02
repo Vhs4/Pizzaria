@@ -1,4 +1,4 @@
-import './Cardapio.css'
+import './Menu.css'
 
 const Cardapio = () => {
   const gridItems = [
@@ -10,17 +10,17 @@ const Cardapio = () => {
   ];
 
   // Componente para cada item do grid
-  const GridItem = ({ description, imageSrc }) => (
-    <div style={{borderRadius: '10%'}} className="bg-white rounded-lg border-b pb-4 cardapiodiv">
-      <img src={imageSrc} alt={`Imagem para ${description}`} className="w-full h-44 rounded-md object-cover mb-2" />
+  const GridItem = ({description, imageSrc }) => (
+    <div style={{borderRadius: '10%'}} className="rounded-lg border-b pr-4 cardapiodiv2">
+      <img src={imageSrc} alt={`Imagem para ${description}`} className="h-44 rounded-md object-cover mb-2" />
       <p className="text-base ml-2" style={{color: '#B30733'}}>{description}</p>
     </div>
   );
 
   return (
     <>
-    <section className="flex items-center justify-center min-w-min">
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-4">
+    <section className="flex justify-center align-center">
+      <div className="columntr">
         {gridItems.map((item) => (
           <GridItem key={item.id} {...item} />
         ))}

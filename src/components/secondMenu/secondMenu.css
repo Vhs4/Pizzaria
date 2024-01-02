@@ -1,0 +1,11 @@
+.cardapiodiv2 {
+    min-width: 40px;
+}
+
+.columntr {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    gap: 1;
+}

@@ -1,6 +1,6 @@
 Projeto Site de pizzaria
 
-[🔗 Clique aqui para acessar](https://https://pizzaria-vhs4.vercel.app/)
+[🔗 Clique aqui para acessar](https://pizzaria-vhs4.vercel.app/)
 
 ## 💻 Tecnologias
 

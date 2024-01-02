@@ -38,7 +38,6 @@ const Login = () => {
         <div className="flex justify-center items-center h-screen medium:h-auto x-sm:h-auto">
             <main className="h-screen border-2 p-1 rounded-md flex m-4 medium:flex-col  medium:items-center  medium:m-0 w-[80%] medium:h-auto x-sm:h-auto">
 
-                {/* Left Section */}
                 <section className="w-1/2  py-2 flex flex-col justify-between gap-6 background-image medium:w-full medium:h-[250px] medium:rounded-md">
 
                     <div className=''>
@@ -64,7 +63,6 @@ const Login = () => {
                 </div>
                 </section>
 
-                {/* Right Section */}
                 <section className="w-1/2 py-5 flex flex-col justify-between items-center rounded-2x medium:w-full medium:rounded-none x-sm:500px">
                     <div className="border-b-2 border-slate-300">
 

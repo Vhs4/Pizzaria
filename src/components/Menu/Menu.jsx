@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './Menu.css'
 
 const Cardapio = () => {
@@ -12,14 +13,16 @@ const Cardapio = () => {
   // Componente para cada item do grid
   const GridItem = ({description, imageSrc }) => (
     <div style={{borderRadius: '10%'}} className="rounded-lg border-b pr-4 cardapiodiv2">
+      <Link to="/page2">
       <img src={imageSrc} alt={`Imagem para ${description}`} className="h-44 rounded-md object-cover mb-2" />
       <p className="text-base ml-2" style={{color: '#B30733'}}>{description}</p>
+      </Link>
     </div>
   );
 
   return (
     <>
-    <section className="flex justify-center align-center">
+    <section className="flex justify-center align-center mb-4">
       <div className="columntr">
         {gridItems.map((item) => (
           <GridItem key={item.id} {...item} />

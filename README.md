@@ -4,6 +4,7 @@ Projeto Site de pizzaria
 
 ## 💻 Tecnologias
 
+- React
 - JavaScript
 - TailwindCSS
 - Webpack

@@ -12,7 +12,7 @@ const Cardapio = () => {
 
   // Componente para cada item do grid
   const GridItem = ({description, imageSrc }) => (
-    <div style={{borderRadius: '10%'}} className="rounded-lg border-b pr-4 cardapiodiv2">
+    <div style={{borderRadius: '10%'}} className="rounded-lg border-b cardapiodiv2">
       <Link to="/page2">
       <img src={imageSrc} alt={`Imagem para ${description}`} className="h-44 rounded-md object-cover mb-2" />
       <p className="text-base ml-2" style={{color: '#B30733'}}>{description}</p>
